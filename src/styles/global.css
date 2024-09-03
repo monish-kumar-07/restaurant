@@ -1,0 +1,13 @@
+/* src/styles/global.css */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #FAF3E0;
+    color: #3D5A80;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+  }
+  
