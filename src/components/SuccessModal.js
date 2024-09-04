@@ -40,7 +40,7 @@ const SuccessModal = ({ isOpen, onClose }) => {
         },
         content: {
           maxWidth: '400px',
-          //margin: 'auto',
+          margin: 'auto',
           border: 'none',
           padding: '0',
           borderRadius: '10px',

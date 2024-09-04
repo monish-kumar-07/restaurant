@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
        <img src='./logo192.png' alt='logo' style={logoStyles}></img>
-      <h1 style={{ color: 'white' }}>Da Vinci</h1>
+      <h1 style={{ color: 'white' }}>Da Vinci Dining</h1>
       <NavLinks>
         <Link to="/">Dashboard</Link>
         <Link to="/reservations">Reservations</Link>

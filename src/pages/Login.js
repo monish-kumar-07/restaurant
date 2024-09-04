@@ -125,11 +125,19 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/');
+    navigate('/dashboard');
   };
 
+  const logoStyles = {
+    maxHeight: '50px',
+    //marginRight: '20px',
+    
+  }
   return (
     <LoginContainer>
+      <img src='./logo192.png' alt='logo' style={logoStyles}></img>
+      <br></br>
+      <img src='./background.png' alt='background' style={{textAlign:'center'}}></img>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <InputField

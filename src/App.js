@@ -60,13 +60,14 @@ import Dashboard from './pages/Dashboard';
 import Reservations from './pages/Reservations';
 import Orders from './pages/Orders';
 import Login from './pages/Login';
-
+//import img1 from '../public/logo192.png';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/login" element={<Login />} />
