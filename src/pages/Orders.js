@@ -1,21 +1,7 @@
-// import React from 'react';
-// import './Orders.css';
-// import { Container, Typography } from '@mui/material';
-
-// const Orders = () => {
-//   return (
-//     <Container className="container">
-//       <Typography variant="h4">Orders</Typography>
-//       {/* Add order management functionality here */}
-//     </Container>
-//   );
-// };
-
-// export default Orders;
-/* src/pages/Orders.js */
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
+import './Orders.css';
 // Styled component for the orders container
 const OrdersContainer = styled.div`
   padding: 0px;
@@ -26,7 +12,7 @@ const OrdersContainer = styled.div`
 
 // Styled component for individual order card
 const OrderCard = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.primary};
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 10px;

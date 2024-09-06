@@ -44,6 +44,7 @@ const SuccessModal = ({ isOpen, onClose }) => {
           border: 'none',
           padding: '0',
           borderRadius: '10px',
+          height: '400px',
         },
       }}
     >

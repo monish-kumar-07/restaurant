@@ -4,15 +4,30 @@ import styled from 'styled-components';
 import SuccessModal from '../components/SuccessModal';
 import Navbar from './Navbar';
 //import styled from 'styled-components';
+import bg from '../assets/pexels.jpg';
 
 // Styled component for the reservations container
+// const ReservationsContainer = styled.div`
+//   padding: 20px;
+//   background-color: ${(props) => props.theme.colors.lightSand};
+//   min-height: 100vh;
+//   font-family: ${(props) => props.theme.fonts.primary};
+
+// `;
 const ReservationsContainer = styled.div`
   padding: 20px;
-  background-color: ${(props) => props.theme.colors.lightSand};
-  min-height: 100vh;
-  font-family: ${(props) => props.theme.fonts.primary};
-
+  background-color: white; /* White background */
+  width: 400px; /* Set width for the square */
+  height: 400px; /* Set height for the square */
+  border-radius: 20px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: ${(props) => props.theme.fonts.secondary};
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for a card effect */
 `;
+
+
 
 // Styled component for the reservation form container
 // const ReservationContainer = styled.div`
@@ -22,6 +37,19 @@ const ReservationsContainer = styled.div`
 //    max-width: 600px;
 //    margin: auto;
 //  `;
+
+const ReservationsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: ${(props) => props.theme.colors.lightSand};
+  background-image: url(${(props) => props.bg}); /* Corrected background-image */
+  background-size: cover;
+  background-position: center;
+`;
+
 
 const parentStyle = {
   display: 'grid',
@@ -70,12 +98,13 @@ const Reservations = () => {
     <div style={parentStyle}>
       <div style={containerStyle}>
       <Navbar/>
+    <ReservationsWrapper bg={bg}>
 
     <ReservationsContainer>
-      <h1>Make a Reservation</h1>
+      <h1>Make Reservation</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name:     </label>
           <input
             type="text"
             id="name"
@@ -86,7 +115,7 @@ const Reservations = () => {
             />
         </div>
         <div>
-          <label htmlFor="date">Date:</label>
+          <label htmlFor="date">Date:     </label>
           <input
             type="date"
             id="date"
@@ -97,7 +126,7 @@ const Reservations = () => {
             />
         </div>
         <div>
-          <label htmlFor="time">Time:</label>
+          <label htmlFor="time">Time:     </label>
           <input
             type="time"
             id="time"
@@ -108,7 +137,7 @@ const Reservations = () => {
             />
         </div>
         <div>
-          <label htmlFor="guests">Number of Guests:</label>
+          <label htmlFor="guests">Number of Guests:      </label>
           <input
             type="number"
             id="guests"
@@ -125,6 +154,7 @@ const Reservations = () => {
       {/* Success modal */}
       <SuccessModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </ReservationsContainer>
+            </ReservationsWrapper>
             </div>
           </div>
   );
